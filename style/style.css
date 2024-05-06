@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Trip Sans";
+  src: url("TripSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+body {
+  margin: 0;
+  background-color: #0a0a0a;
+  color: #fff;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 15px;
+  height: 10vh;
+  position: relative;
+}
+
+header h1 {
+  font-family: "Trip Sans";
+  font-weight: 500;
+  font-style: normal;
+  color: #ffffff;
+  margin-top: 2vh;
+}
+
+.weathericons {
+  text-align: center;
+}
+
+.weathericons img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(153deg)
+    brightness(104%) contrast(101%);
+  height: 40vh;
+  width: 20vw;
+}
+.searchbox {
+  display: inline-block;
+  position: relative;
+}
+input[type="text"] {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: "Trip Sans";
+  border: none;
+  text-align: center;
+  font-size: 3em;
+  width: 100%;
+}
+svg.bi {
+  position: absolute;
+  top: 40%;
+  right: 2vw;
+}
+input[type="text"]:focus,
+input[type="text"]:focus-visible {
+  background-color: #0a0a0a;
+  color: #fff;
+  font-family: "Trip Sans";
+  border: none !important;
+  text-align: center;
+  font-size: 3em;
+  width: 100%;
+  outline: none;
+}
+
+#temp {
+  font-size: 5em;
+}
+
+.weatherDetails img {
+  height: 10vh;
+  width: 100%;
+}
+.weatherDetails {
+  margin-top: auto;
+}
+
+.weatherDetails h4 {
+  font-size: 20px;
+}
+
+.shake {
+  animation: shakeAnimation 0.4s 1 linear;
+}
+
+@keyframes shakeAnimation {
+  0% {
+    transform: translateX(30px);
+  }
+  20% {
+    transform: translateX(-30px);
+  }
+  40% {
+    transform: translateX(15px);
+  }
+  60% {
+    transform: translateX(-15px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}.error {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  background-color: #404040;
+  border-radius: 5px;
+  width: 20vw;
+  height: 5vh;
+  text-align: center; /* Vertical centering */
+  opacity: 0;
+  animation: popup 0.5s ease forwards;
+}
+
+.error span {
+  font-family: "Trip sans";
+  text-transform: capitalize;
+  margin-bottom: 4px;
+}
+.err{
+  display: none;
+}
+@keyframes popup {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
